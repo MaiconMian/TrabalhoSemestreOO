@@ -27,7 +27,6 @@ public class ProdutoDAO {
             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Não foi possível salvar");
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
             ConectionFactory.closeConnection(con, stmt);
