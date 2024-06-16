@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagInicialController">
+   <children>
+      <ImageView fx:id="imgLogo" fitHeight="29.0" fitWidth="28.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="NomeEmpresa" layoutX="46.0" layoutY="3.0" text="Nome da Empresa">
+         <font>
+            <Font name="Arial Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="CtrlProdutos" layoutX="14.0" layoutY="38.0" text="Controle de Produtos">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+
+      <TableView fx:id="tvProdutos" layoutX="20.0" layoutY="109.0" prefHeight="269.0" prefWidth="567.0" />
+
+      <Pagination fx:id="pagination" layoutX="14.0" layoutY="385.0" pageCount="100" prefHeight="45.0" prefWidth="574.0" />
+      <Button fx:id="buttonRemover" layoutX="522.0" layoutY="75.0" mnemonicParsing="false" onAction="#removerProdutoSelecionado" text="Remover" />
+      <Button fx:id="buttonEditar" layoutX="467.0" layoutY="75.0" mnemonicParsing="false" onAction="#changeScreenToEdicao" text="Editar" />
+      <Button fx:id="buttonCadastrar" layoutX="392.0" layoutY="75.0" mnemonicParsing="false" onAction="#changeScreenToCadastrar" text="Cadastrar" />
+      <TextField fx:id="txtPesquisa" layoutX="19.0" layoutY="75.0" prefHeight="25.0" prefWidth="370.0" promptText="Pesquisar Produto..." />
+      <Button fx:id="buttonPesquisa" layoutX="323.0" layoutY="75.0" mnemonicParsing="false" onAction="#pesquisa" prefHeight="25.0" prefWidth="67.0" text="Pesquisar" />
+   </children>
+</AnchorPane>

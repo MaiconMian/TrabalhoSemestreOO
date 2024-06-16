@@ -1,13 +1,26 @@
 package modelos;
 
-public class Produto {
-    private String name;
-    private String description;
+public class Produto implements Comparable<Produto> {
+    private String nome;
+    private String descricao;
     private String marca;
     private String categoria;
     private double preco;
     private double custo;
     private long ID;
+
+    public Produto(){
+
+    }
+
+    public Produto(String nome, String descricao, String categoria, String marca, double preco, double custo){
+        this.nome = nome;
+        this.descricao = descricao;
+        this.categoria = categoria;
+        this.marca = marca;
+        this.preco = preco;
+        this.custo = custo;
+    }
 
     public void setID(long ID){
         this.ID = ID;
@@ -17,26 +30,22 @@ public class Produto {
         return ID;
     }
 
-
-    // Getter e Setter para name
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String name) {
+        this.nome = name;
     }
 
-    // Getter e Setter para description
-    public String getDescription() {
-        return description;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
-    // Getter e Setter para marca
     public String getMarca() {
         return marca;
     }
@@ -45,7 +54,6 @@ public class Produto {
         this.marca = marca;
     }
 
-    // Getter e Setter para categoria
     public String getCategoria() {
         return categoria;
     }
@@ -54,7 +62,6 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    // Getter e Setter para preco
     public double getPreco() {
         return preco;
     }
@@ -63,7 +70,6 @@ public class Produto {
         this.preco = preco;
     }
 
-    // Getter e Setter para custo
     public double getCusto() {
         return custo;
     }
@@ -72,4 +78,8 @@ public class Produto {
         this.custo = custo;
     }
 
+    @Override
+    public int compareTo(Produto o) {
+        return this.nome.compareTo(o.nome);
+    }
 }
