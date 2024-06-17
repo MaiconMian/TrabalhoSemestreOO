@@ -8,30 +8,54 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagCadastroController">
+<AnchorPane prefHeight="540.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagCadastroController">
    <children>
-      <ImageView fx:id="imgLogoCadastro" fitHeight="29.0" fitWidth="28.0" layoutX="24.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="textProdutoCadastro" layoutX="23.0" layoutY="120.0" prefHeight="50.0" prefWidth="300.0" promptText="Nome do Produto...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <TextField fx:id="textPrecoCadastro" layoutX="355.0" layoutY="119.0" prefHeight="50.0" prefWidth="300.0" promptText="Preço...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <TextField fx:id="textCustoCadastro" layoutX="682.0" layoutY="120.0" prefHeight="50.0" prefWidth="300.0" promptText="Custo...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <TextField fx:id="textCategoriaCadastro" layoutX="23.0" layoutY="187.0" prefHeight="44.0" prefWidth="300.0" promptText="Categoria...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <TextField fx:id="textMarcaCadastro" layoutX="355.0" layoutY="187.0" prefHeight="50.0" prefWidth="300.0" promptText="Marca...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <TextField fx:id="textDescricaoCadastro" alignment="TOP_LEFT" layoutX="23.0" layoutY="258.0" prefHeight="168.0" prefWidth="960.0" promptText="Descrição do Produto...">
+         <font>
+            <Font size="23.0" />
+         </font></TextField>
+      <Button fx:id="buttonCadastrar" layoutX="885.0" layoutY="461.0" mnemonicParsing="false" onAction="#buttonCadastrar" prefHeight="44.0" prefWidth="97.0" text="Cadastrar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="buttonCancelar" layoutX="777.0" layoutY="461.0" mnemonicParsing="false" onAction="#changeScreenToMenu" prefHeight="44.0" prefWidth="97.0" text="Cancelar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <ImageView fx:id="imgLogoCadastro" fitHeight="44.0" fitWidth="52.0" layoutX="23.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.jpeg" />
+            <Image url="@images/logo.png" />
          </image>
       </ImageView>
-      <Label fx:id="NomeEmpresaCadastrotxt" layoutX="56.0" layoutY="13.0" text="Nome da Empresa">
+      <Label fx:id="NomeEmpresaCadastrotxt" layoutX="82.0" layoutY="24.0" text="Blue Velvet Music Store">
          <font>
-            <Font name="Arial Bold" size="27.0" />
+            <Font name="Arial Bold" size="46.0" />
          </font>
       </Label>
-      <Label fx:id="CadastroProdutostxt" layoutX="24.0" layoutY="48.0" text="Cadastro de Produtos">
+      <Label fx:id="EdicaoProdutostxt" layoutX="23.0" layoutY="81.0" text="Cadastro de Produto">
          <font>
-            <Font name="Arial Bold" size="18.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <TextField fx:id="textProdutoCadastro" layoutX="24.0" layoutY="103.0" prefHeight="25.0" prefWidth="176.0" promptText="Nome do Produto..." />
-      <TextField fx:id="textPrecoCadastro" layoutX="212.0" layoutY="103.0" prefHeight="25.0" prefWidth="176.0" promptText="Preço..." />
-      <TextField fx:id="textCustoCadastro" layoutX="399.0" layoutY="103.0" prefHeight="25.0" prefWidth="176.0" promptText="Custo..." />
-      <TextField fx:id="textCategoriaCadastro" layoutX="24.0" layoutY="137.0" prefHeight="25.0" prefWidth="176.0" promptText="Categoria..." />
-      <TextField fx:id="textMarcaCadastro" layoutX="212.0" layoutY="137.0" prefHeight="25.0" prefWidth="176.0" promptText="Marca..." />
-      <TextField fx:id="textDescricaoCadastro" alignment="TOP_LEFT" layoutX="24.0" layoutY="178.0" prefHeight="168.0" prefWidth="551.0" promptText="Descrição do Produto..." />
-      <Button fx:id="buttonCadastrar" layoutX="478.0" layoutY="393.0" mnemonicParsing="false" onAction="#buttonCadastrar" prefHeight="25.0" prefWidth="97.0" text="Cadastrar" />
-      <Button fx:id="buttonCancelar" layoutX="370.0" layoutY="393.0" mnemonicParsing="false" onAction="#changeScreenToMenu" prefHeight="25.0" prefWidth="97.0" text="Cancelar" />
    </children>
 </AnchorPane>

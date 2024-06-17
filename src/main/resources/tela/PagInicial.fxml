@@ -10,31 +10,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="434.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagInicialController">
+<AnchorPane prefHeight="540.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagInicialController">
    <children>
-      <ImageView fx:id="imgLogo" fitHeight="29.0" fitWidth="28.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imgLogo" fitHeight="44.0" fitWidth="52.0" layoutX="27.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.jpeg" />
+            <Image url="@images/logo.png" />
          </image>
       </ImageView>
-      <Label fx:id="NomeEmpresa" layoutX="46.0" layoutY="3.0" text="Nome da Empresa">
+      <Label fx:id="NomeEmpresa" layoutX="82.0" layoutY="14.0" prefHeight="32.0" prefWidth="898.0" text="Blue Velvet Music Store">
          <font>
-            <Font name="Arial Bold" size="27.0" />
+            <Font name="Arial Bold" size="46.0" />
          </font>
       </Label>
-      <Label fx:id="CtrlProdutos" layoutX="14.0" layoutY="38.0" text="Controle de Produtos">
+      <Label fx:id="CtrlProdutos" layoutX="26.0" layoutY="65.0" text="Controle de Produtos">
          <font>
-            <Font name="Arial Bold" size="18.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
 
-      <TableView fx:id="tvProdutos" layoutX="20.0" layoutY="109.0" prefHeight="269.0" prefWidth="567.0" />
+      <TableView fx:id="tvProdutos" layoutX="27.0" layoutY="184.0" prefHeight="269.0" prefWidth="960.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></TableView>
 
-      <Pagination fx:id="pagination" layoutX="14.0" layoutY="385.0" pageCount="100" prefHeight="45.0" prefWidth="574.0" />
-      <Button fx:id="buttonRemover" layoutX="522.0" layoutY="75.0" mnemonicParsing="false" onAction="#removerProdutoSelecionado" text="Remover" />
-      <Button fx:id="buttonEditar" layoutX="467.0" layoutY="75.0" mnemonicParsing="false" onAction="#changeScreenToEdicao" text="Editar" />
-      <Button fx:id="buttonCadastrar" layoutX="392.0" layoutY="75.0" mnemonicParsing="false" onAction="#changeScreenToCadastrar" text="Cadastrar" />
-      <TextField fx:id="txtPesquisa" layoutX="19.0" layoutY="75.0" prefHeight="25.0" prefWidth="370.0" promptText="Pesquisar Produto..." />
-      <Button fx:id="buttonPesquisa" layoutX="323.0" layoutY="75.0" mnemonicParsing="false" onAction="#pesquisa" prefHeight="25.0" prefWidth="67.0" text="Pesquisar" />
+      <Pagination fx:id="pagination" layoutX="20.0" layoutY="472.0" pageCount="100" prefHeight="53.0" prefWidth="960.0" />
+      <Button fx:id="buttonRemover" layoutX="892.0" layoutY="109.0" mnemonicParsing="false" onAction="#removerProdutoSelecionado" prefHeight="45.0" prefWidth="96.0" text="Remover">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="buttonEditar" layoutX="822.0" layoutY="110.0" mnemonicParsing="false" onAction="#changeScreenToEdicao" prefHeight="44.0" prefWidth="66.0" text="Editar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="buttonCadastrar" layoutX="722.0" layoutY="110.0" mnemonicParsing="false" onAction="#changeScreenToCadastrar" prefHeight="44.0" prefWidth="96.0" text="Cadastrar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <TextField fx:id="txtPesquisa" layoutX="27.0" layoutY="110.0" prefHeight="44.0" prefWidth="687.0" promptText="Pesquisar Produto...">
+         <font>
+            <Font size="19.0" />
+         </font></TextField>
+      <Button fx:id="buttonPesquisa" layoutX="601.0" layoutY="110.0" mnemonicParsing="false" onAction="#pesquisa" prefHeight="44.0" prefWidth="117.0" text="Pesquisar">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
    </children>
 </AnchorPane>

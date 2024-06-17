@@ -27,18 +27,19 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
 
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Controle de Produtos");
 
         FXMLLoader fxmlInicial = new FXMLLoader(Main.class.getResource("PagInicial.fxml"));
-        pagInicialScene = new Scene(fxmlInicial.load(), 600, 434);
+        pagInicialScene = new Scene(fxmlInicial.load(), 1000, 540);
         pagInicialController = fxmlInicial.getController();
 
         FXMLLoader fxmlCadastro = new FXMLLoader(Main.class.getResource("PagCadastro.fxml"));
-        pagCadastroScene = new Scene(fxmlCadastro.load(), 600, 434);
+        pagCadastroScene = new Scene(fxmlCadastro.load(), 1000, 540);
         pagCadastroController = fxmlCadastro.getController();
 
         FXMLLoader fxmlEdicao = new FXMLLoader(Main.class.getResource("PagEdicao.fxml"));
-        pagEdicaoScene = new Scene(fxmlEdicao.load(), 600, 434);
+        pagEdicaoScene = new Scene(fxmlEdicao.load(), 1000, 540);
         pagEdicaoController = fxmlEdicao.getController();
 
         primaryStage.setScene(pagInicialScene);
@@ -49,14 +50,17 @@ public class Main extends Application {
         switch (scr){
             case "pagInicial":
                 stage.setScene(pagInicialScene);
+                stage.setTitle("Controle de Produtos");
                 pagInicialController.atualiza();
                 break;
             case "pagCadastro":
                 stage.setScene(pagCadastroScene);
+                stage.setTitle("Cadastro de Produtos");
                 pagCadastroController.clean();
                 break;
             case "pagEdicao":
                 stage.setScene(pagEdicaoScene);
+                stage.setTitle("Edição de Produtos");
                 pagEdicaoController.setProdutoEditar(p);
                 break;
         }
