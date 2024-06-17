@@ -1,0 +1,126 @@
+.root {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #dcdcdc;
+}
+.label {
+    -fx-text-fill: #dcdcdc;
+}
+.button {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #dcdcdc;
+    -fx-border-color: #5a5a5a;
+    -fx-border-width: 1px;
+}
+.button:hover {
+    -fx-background-color: #5a5a5a;
+}
+.text-field {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #dcdcdc;
+    -fx-border-color: #5a5a5a;
+}
+
+.text-field:focused {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #dcdcdc;
+}
+
+/* Style for table views */
+.table-view {
+    -fx-background-color: #2b2b2b;
+    -fx-control-inner-background: #3c3f41;
+    -fx-table-cell-border-color: #2b2b2b;
+    -fx-table-header-border-color: #2b2b2b;
+}
+
+.table-row-cell {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: #dcdcdc;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #3c3f41;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #3c3f41;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #5a5a5a;
+}
+
+/* Style for menu bars */
+.menu-bar {
+    -fx-background-color: #3c3f41;
+}
+
+.menu-item {
+    -fx-text-fill: #dcdcdc;
+}
+
+
+.rounded-hbox {
+    -fx-background-color: #4169E1; /* Cor de fundo azul claro */
+    -fx-background-radius: 15; /* Raio do fundo arredondado */
+    -fx-padding: 10; /* Espaçamento interno */
+}
+
+
+.blue-button {
+    -fx-background-color: #4169E1; /* Cor de fundo azul */
+    -fx-text-fill: white; /* Cor do texto branco */
+    -fx-background-radius: 5px; /* Arredondamento das bordas */
+    -fx-border-width: 1px; /* Largura da borda */
+    -fx-border-color: #005d99; /* Cor da borda azul mais escura */
+}
+
+.blue-button:hover {
+    -fx-background-color: #005d99; /* Cor de fundo ao passar o mouse */
+    -fx-border-color: #004c80; /* Cor da borda ao passar o mouse */
+}
+
+.blue-button:pressed {
+    -fx-background-color: #004c80; /* Cor de fundo quando pressionado */
+    -fx-border-color: #003f66; /* Cor da borda quando pressionado */
+}
+
+.transparent-vbox {
+    -fx-background-color: transparent;
+    -fx-border-color: white; /* Cor da borda azul */
+    -fx-border-width: 2px; /* Largura da borda */
+    -fx-padding: 10px; /* Espaçamento interno */
+    -fx-background-radius: 20px;
+    -fx-border-width: 1px; /* Largura da borda */
+}
+
+.rounded-text-field {
+    -fx-background-radius: 20; /* Raio de arredondamento das bordas */
+    -fx-border-radius: 20; /* Raio de arredondamento das bordas */
+    -fx-padding: 8px; /* Espaçamento interno */
+    -fx-border-color: #b0bec5; /* Cor da borda */
+    -fx-border-width: 2px; /* Largura da borda */
+    -fx-min-height: 40px;   /* Altura mínima */
+    -fx-max-height: 40px;   /* Altura máxima */
+}
+
+.text-field-descricao {
+    -fx-background-radius: 20; /* Raio de arredondamento das bordas */
+    -fx-border-radius: 20; /* Raio de arredondamento das bordas */
+    -fx-padding: 8px; /* Espaçamento interno */
+    -fx-border-color: #b0bec5; /* Cor da borda */
+    -fx-border-width: 2px; /* Largura da borda */
+}
+
+.small-text-field {
+    -fx-min-height: 40px;
+    -fx-max-height: 40px;
+
+}
+.table-view .column-header {
+    -fx-background-color: #4169E1;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
