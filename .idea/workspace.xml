@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a05aa60a-5b8d-423f-9a00-a77a36f7bf0e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CriadorBD.sql" beforeDir="false" afterPath="$PROJECT_DIR$/CriadorBD.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tela/PagInicialControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tela/PagInicialControlador.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maico/Desktop/Poo/TrabalhoSemestreOO&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lucas/Documents/GitHub/TrabalhoSemestreOO&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -139,22 +140,12 @@
       <workItem from="1718639239774" duration="800000" />
       <workItem from="1718644875605" duration="610000" />
       <workItem from="1718646177485" duration="37000" />
+      <workItem from="1718646536154" duration="117000" />
+      <workItem from="1718646662389" duration="121000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/conexaoSQL/FabricaConecao.java</url>
-          <line>5</line>
-          <properties field="DRIVE" class="conexaoSQL.FabricaConecao" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

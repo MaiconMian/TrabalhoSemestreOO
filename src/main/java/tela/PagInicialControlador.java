@@ -123,7 +123,6 @@ public class PagInicialControlador {
      */
     @FXML
     public void pesquisa() {
-        // pega o nome do produto e verifica se nao e vazio
         String nomeProduto = txtPesquisa.getText();
         if (nomeProduto == null || nomeProduto.trim().isEmpty()) {
             atualiza();
@@ -133,21 +132,16 @@ public class PagInicialControlador {
             produtosFiltrados = new ArrayList<>();
 
             // busca dentre todos os produtos quais tem o nome filtrado
+            String nomeProdutoMinusculo = nomeProduto.toLowerCase();
             for (Produto p : produtos) {
-                String nomeProdutoMinusculo = nomeProduto.toLowerCase();
                 String nomeProdutoTabela = p.getNome().toLowerCase();
-
-                if (nomeProdutoTabela.equals(nomeProdutoMinusculo)) {
+                if (nomeProdutoTabela.contains(nomeProdutoMinusculo)) {
                     produtosFiltrados.add(p);
                 }
             }
 
             // Atualiza a paginação para os produtos filtrados
-            int pageCount = (int) Math.ceil((double) produtosFiltrados.size() / ITEMS_PER_PAGE);
-            pagination.setPageCount(pageCount);
-            pagination.setCurrentPageIndex(0); // Reseta para a primeira página
-
-            atualizaTabela(0);
+            atualizaPaginacao();
         }
     }
     @FXML
