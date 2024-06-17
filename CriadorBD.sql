@@ -22,5 +22,29 @@ VALUES ('Hollywoods Bleending', 'Album de Post Malone', 'Republic Record', 'Albu
 INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
 VALUES ('Live in London', 'Album de Jorge e Mateus', 'Som Livre', 'Album', '500', '300');
 
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('Camiseta Foo Fighters', 'Camiseta preta com a cor do álbum', 'JhonJhon', 'Camiseta', 45, 25);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('Quadro Rock', 'Quadro com várias bandas de rock', 'Frames', 'Quadro', 70, 40);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('CD The color and the Shape', 'Album Foo fighters', 'Capitol Records', 'CD', 40, 20);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('Camisa Red Hot Chili Peppers', 'Camisa banda', 'Rock Store', 'Camisa', 80, 60);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('MP4', 'MP4 para ouvir músicas', 'Sony', 'Eletrônico', 150, 90);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('Fone de ouvido com fio', 'Fone de ouvido com fio', 'JBL', 'Acessório', 230, 180);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('CD All Hope is Gone', 'Album Slipknot', 'Capitol Records', 'CD', 35, 15);
+
+INSERT INTO PRODUTOS (NOME, DESCRICAO, MARCA, CATEGORIA, PRECO, CUSTO)
+VALUES ('CD Continuum', 'Album John Mayer', 'Capitol Records', 'CD', 40, 20);
+
 CREATE USER 'Adm'@'localhost' IDENTIFIED BY 'Secret_123';
 GRANT ALL PRIVILEGES ON produtos_bd.* TO 'Adm'@'localhost';
