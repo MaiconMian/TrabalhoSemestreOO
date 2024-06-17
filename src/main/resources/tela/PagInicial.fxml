@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="540.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagInicialController">
+<AnchorPane prefHeight="540.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tela.PagInicialControlador">
    <children>
       <ImageView fx:id="imgLogo" fitHeight="44.0" fitWidth="52.0" layoutX="27.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>

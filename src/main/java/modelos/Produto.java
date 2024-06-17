@@ -1,6 +1,12 @@
 package modelos;
 
+/**
+ * Classe Produto representa um produto com suas características.
+ * Implementa a interface Comparable para permitir a comparação de produtos pelo nome.
+ */
 public class Produto implements Comparable<Produto> {
+
+    // Atributos de um produto
     private String nome;
     private String descricao;
     private String marca;
@@ -9,10 +15,21 @@ public class Produto implements Comparable<Produto> {
     private double custo;
     private long ID;
 
+
     public Produto(){
 
     }
 
+    /**
+     * Construtor da classe Produto com parametros.
+     *
+     * @param nome do produto.
+     * @param descricao do produto.
+     * @param categoria do produto.
+     * @param marca do produto.
+     * @param preco do produto.
+     * @param custo do produto.
+     */
     public Produto(String nome, String descricao, String categoria, String marca, double preco, double custo){
         this.nome = nome;
         this.descricao = descricao;
@@ -22,6 +39,9 @@ public class Produto implements Comparable<Produto> {
         this.custo = custo;
     }
 
+    /**
+     A seguir teremos os métodos get's e set's de todos os atributos do objeto Produto
+     */
     public void setID(long ID){
         this.ID = ID;
     }
@@ -79,6 +99,11 @@ public class Produto implements Comparable<Produto> {
     }
 
     @Override
+    /**
+     * metodo para comparar dois produtos pelo seu nome
+     *
+     * @param o produto a ser comparado
+     */
     public int compareTo(Produto o) {
         return this.nome.compareTo(o.nome);
     }
