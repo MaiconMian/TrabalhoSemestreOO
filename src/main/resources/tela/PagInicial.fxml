@@ -15,7 +15,7 @@
    <children>
       <ImageView fx:id="imgLogo" fitHeight="44.0" fitWidth="52.0" layoutX="27.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
       <Label fx:id="NomeEmpresa" layoutX="82.0" layoutY="14.0" prefHeight="32.0" prefWidth="912.0" text="Blue Velvet Music Store" AnchorPane.topAnchor="9.0">

@@ -25,6 +25,8 @@ public class PagInicialController {
     @FXML
     private Pagination pagination;
 
+    private List<Produto> produtosFiltrados;
+
     @FXML
     protected void removerProdutoSelecionado(){
         try{
@@ -73,19 +75,21 @@ public class PagInicialController {
     }
 
     private void atualizaTabela(int pageIndex) {
-        List<Produto> produtos = Loja.showTable();
         int start = pageIndex * ITEMS_PER_PAGE;
-        int end = Math.min(start + ITEMS_PER_PAGE, produtos.size());
+        int end = Math.min(start + ITEMS_PER_PAGE, produtosFiltrados.size());
         if (start <= end) {
-            tvProdutos.getItems().setAll(produtos.subList(start, end));
+            tvProdutos.getItems().setAll(produtosFiltrados.subList(start, end));
         }
     }
 
     public void atualiza() {
-        List<Produto> produtos = Loja.showTable();
+        produtosFiltrados = Loja.showTable();
+        atualizaPaginacao();
+    }
 
+    private void atualizaPaginacao() {
         // Configura a paginação
-        int pageCount = (int) Math.ceil((double) produtos.size() / ITEMS_PER_PAGE);
+        int pageCount = (int) Math.ceil((double) produtosFiltrados.size() / ITEMS_PER_PAGE);
         pagination.setPageCount(pageCount);
 
         if (pagination.getCurrentPageIndex() >= pageCount) {
@@ -102,7 +106,7 @@ public class PagInicialController {
             atualiza();
         } else {
             List<Produto> produtos = Loja.showTable();
-            List<Produto> produtosFiltrados = new ArrayList<>();
+            produtosFiltrados = new ArrayList<>();
 
             for (Produto p : produtos) {
                 String nomeProdutoMinusculo = nomeProduto.toLowerCase();
@@ -113,19 +117,15 @@ public class PagInicialController {
                 }
             }
 
-            tvProdutos.getItems().clear();
-            tvProdutos.getItems().addAll(produtosFiltrados);
-
             // Atualiza a paginação para os produtos filtrados
             int pageCount = (int) Math.ceil((double) produtosFiltrados.size() / ITEMS_PER_PAGE);
             pagination.setPageCount(pageCount);
             pagination.setCurrentPageIndex(0); // Reseta para a primeira página
 
-            if (produtosFiltrados.size() > 0) {
-                atualizaTabela(0);
-            }
+            atualizaTabela(0);
         }
     }
+
 
     @FXML
     protected void changeScreenToCadastrar(){
