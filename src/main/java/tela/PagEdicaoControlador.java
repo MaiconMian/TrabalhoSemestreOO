@@ -8,7 +8,12 @@ import javafx.scene.control.TextField;
 
 import modelos.Produto;
 
-public class PagEdicaoController {
+/**
+ * Classe responsável por controlar a tela de cadastro de edicao de um produto.
+ */
+public class PagEdicaoControlador {
+
+    // atributos de um produto
     @FXML
     private TextField textProdutoEdicao;
     @FXML
@@ -23,8 +28,11 @@ public class PagEdicaoController {
     private TextField textMarcaEdicao;
     private Produto produtoParaEditar;
 
-
-
+    /**
+     * Método para definir o produto a ser editado e preencher os campos de texto com seus dados.
+     *
+     * @param produto o produto a ser editado.
+     */
     public void setProdutoEditar(Produto produto) {
         this.produtoParaEditar = produto;
         textProdutoEdicao.setText(produto.getNome());
@@ -40,6 +48,10 @@ public class PagEdicaoController {
         Main.chanceScreen("pagInicial", null);
     }
 
+    /**
+     * Método chamado quando o botão "Salvar" é clicado na tela de edição.
+     * Valida os campos, atualiza o produto e retorna à tela inicial.
+     */
     @FXML
     protected void buttonSalvar(){
         try{
@@ -50,12 +62,13 @@ public class PagEdicaoController {
             String categoria = textCategoriaEdicao.getText();
             String descricao = textDescricaoEdicao.getText();
 
+            // verifica se apos a edicao ainda permanece com os camposobrigatorios
             if (produto == null || produto.trim().isEmpty() || preco == null || preco.trim().isEmpty()){
                 throw new ExcecaoCamposObrigatoriosVazios("Campos obriatórios não preenchidos");
             }
 
+            // converte os tipos
             double custo_, preco_;
-
             if (custo != null){
                 custo_ = Double.parseDouble(custo);
             } else {
@@ -66,11 +79,11 @@ public class PagEdicaoController {
             } else {
                 preco_ = 0.0;
             }
-
-            Loja.modificar(produtoParaEditar.getID(), produto, descricao, categoria, marca, preco_, custo_);
+            Loja loja = Loja.getLoja();
+            loja.modificarPruduto(produtoParaEditar.getID(), produto, descricao, categoria, marca, preco_, custo_);
             Main.chanceScreen("pagInicial", null);
-
         } catch (ExcecaoCamposObrigatoriosVazios ex){
+            // mostra uma tela de erro
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle(ex.getMessage());
             alert.setHeaderText("Campos obrigatórios não preenchidos");
